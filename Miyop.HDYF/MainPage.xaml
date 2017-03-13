@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Miyop.HDYF.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Miyop.HDYF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <RelativePanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="panel">
+            <CaptureElement Name="PreviewControl"  Stretch="Uniform"/>
+            <Canvas x:Name="VisualizationCanvas" Visibility="Visible" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button x:Name="btnStart"  RelativePanel.RightOf="PreviewControl" Content="START"  Click="button_Click" Margin="-120,459,0,98" Height="83" Width="111"/>
+            <Button x:Name="btnFinish" RelativePanel.RightOf="PreviewControl" Content="FINISH" Click="button_Copy_Click" Margin="-120,553,9,10" Height="100" Width="111"/>
+            <Button x:Name="btnCapture" RelativePanel.RightOf="PreviewControl"  Content="CAPTURE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="1.369,-1.696" Width="109" Click="btnCapture_Click" Margin="-252,544,143,-632"/>
+            <Border Background="Silver" BorderThickness="1" RelativePanel.AlignLeftWithPanel="True" Margin="1,458,-198,-639">
+                <TextBlock x:Name="txtResult" Text="" Margin="0.2,-0.8,-1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Border>
+        </RelativePanel>
+
+    </Grid>
+</Page>
